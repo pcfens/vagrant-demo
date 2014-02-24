@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vagrant</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+<div class="slides">
+    <section>
+        <h1>Vagrant</h1>
+        <h3>Speed up development</h3>
+        <br /><br />
+        <p>Phil Fenstermacher</p>
+        <p><a href="mailto:pcfens@wm.edu">pcfens@wm.edu</a></p>
+    </section>
+    <section>
+        <h2>When should I start paying attention?</h2>
+        <ol>
+            <li>Why I'm here</li>
+            <li>What is Vagrant?</li>
+            <li>How it helps IT</li>
+            <li>Demo</li> 
+    </section>
+    <section>
+        <h2>Who am I?</h2>
+        <p class="fragment">That guy who throws out too much information too quickly</p>
+        <p class="fragment">*nix Engineering</p>
+        <p class="fragment">Swem</p>
+        <p class="fragment">Automation</p>
+    </section>
+    <section>
+        <h2>What is Vagrant?</h2>
+        <blockquote class="fragment" cite="http://vagrantup.com">Create and configure lightweight, reproducible, and portable development environments.</blockquote><br />
+        <p class="fragment">Easily distributable development environments</p>
+    </section>
+    <section>
+        <h2>diff development.env production.env</h2>
+        <p class="fragment">Who can make changes (and when)</p>
+        <p class="fragment">Maybe some compilers/dev libraries</p>
+        <p class="fragment">Monitoring</p>
+        <br />
+        <p class="fragment">Unless you code in (Ubuntu|RedHat|Solaris) without a GUI, and engineering maintains your desktop, this isn't the case</p>
+    </section>
+    <section>
+        <h2>You want to have a real dev machine, without waiting on engineering.</h2>
+    </section>
+    <section>
+        <h2>Engineers get bored easily</h2>
+        <p class="fragment">*nix Engineering is building machines in an automated way</p>
+        <p class="fragment">Why not build machines outside of the datacenter?</p>
+        <p class="fragment">Amazon, RackSpace, your Desktop</p>
+    </section>
+    <section>
+        <h2>this helps me how?...</h2>
+        <p class="fragment">No more building development environments</p>
+        <p class="fragment">You own the dev server</p>
+        <p class="fragment"><strike>"Works on my machine"</strike></p>
+        <p class="fragment">Multiple environments that used to conflict</p>
+    </section>
+    <section>
+        <h2>You are root</h2>
+        <p class="fragment">Vagrant gives you a place to test everything</p>
+        <p class="fragment">Matches production</p>
+        <p class="fragment">Alleviates common VM pains</p>
+    </section>
+    <section>
+        <h2>Vagrant as a Sandbox</h2>
+        <p class="fragment">Good place to test things without consequences</p>
+        <p class="fragment">Combine with git/hg/bzr</p>
+    </section>
+    <section>
+        <h2>Outside of IT</h2>
+        <p class="fragment">Demo things to customers with just your laptop</p>
+        <p class="fragment">Make changes they can see right away</p>
+        <p class="fragment">Shorten/move (acceptance) testing</p>
+    </section>
+    <section>
+        <h2>Demo Time!</h2>
+    </section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+     });
+
+</script>
+</body>
+</html>

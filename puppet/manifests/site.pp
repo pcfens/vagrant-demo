@@ -1,3 +1,0 @@
-package { 'git':
-  ensure => present,
-}
